@@ -1,6 +1,9 @@
 # 3D_Models_warehouse
 3D Models for the warehouse.
 
+I made an Model by Placing the Objects manually in the Scene, 
+the link to that model. <a href="https://drive.google.com/file/d/1RGn6QzW1_GJdYuNm6cQF0sSnF0QWWsHi/view?usp=sharing"> Link </a>
+
 These are some of the small but Important code Snippets which you might be looking for
 
 - How to Import a .dae model in Blender
