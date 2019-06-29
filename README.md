@@ -19,9 +19,9 @@ imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
 - How to Translate the Models in X, Y and Z repectively
 ```sh
 name = "SketchUp";
-bpy.data.objects[name].location.x += 3.0
-bpy.data.objects[name].location.y += 3.0
-bpy.data.objects[name].location.z += 3.0
+bpy.data.objects[name].location.x = 3.0 # For Translation along X
+bpy.data.objects[name].location.y = 3.0 # For Translation along Y
+bpy.data.objects[name].location.z = 3.0 # For Translation along Z
 
 #bpy.context.object.location[0] = 0.87 # For Translation along X
 #bpy.context.object.location[1] = 0.87 # For Translation along Y
@@ -32,10 +32,13 @@ bpy.data.objects[name].location.z += 3.0
 - How to Scale the Models in X,Y and Z axis respectively
 
 ```sh
+bpy.data.objects[name].scale.x = 3.0 # For scaling along X
+bpy.data.objects[name].scale.y = 3.0 # For Scaling along Y
+bpy.data.objects[name].scale.z = 3.0 # For Scaling along Z
 
-bpy.context.object.scale[0] = 0.025 # For scaling in X
-bpy.context.object.scale[1] = 0.025 # For Scaling in Y
-bpy.context.object.scale[2] = 0.025 # For Scaling in Z
+#bpy.context.object.scale[0] = 0.025 # For scaling in X
+#bpy.context.object.scale[1] = 0.025 # For Scaling in Y
+#bpy.context.object.scale[2] = 0.025 # For Scaling in Z
 
 ```
 
@@ -43,8 +46,12 @@ bpy.context.object.scale[2] = 0.025 # For Scaling in Z
 
 ```sh
 
-bpy.context.object.rotation_euler[0] = 0.2 # For Rotation along X
-bpy.context.object.rotation_euler[1] = 0.2 # For Rotation along Y
-bpy.context.object.rotation_euler[2] = 0.2 # For Rotation along Z
+bpy.data.objects[name].location.x = 3.0 # For Rotation along X
+bpy.data.objects[name].location.y = 3.0 # For Rotation along Y
+bpy.data.objects[name].location.z = 3.0 # For Rotation along Z
+
+#bpy.context.object.rotation_euler[0] = 0.2 # For Rotation along X
+#bpy.context.object.rotation_euler[1] = 0.2 # For Rotation along Y
+#bpy.context.object.rotation_euler[2] = 0.2 # For Rotation along Z
 
 ```
