@@ -18,10 +18,14 @@ imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
 ```
 - How to Translate the Models in X, Y and Z repectively
 ```sh
+name = "SketchUp";
+bpy.data.objects[name].location.x += 3.0
+bpy.data.objects[name].location.y += 3.0
+bpy.data.objects[name].location.z += 3.0
 
-bpy.context.object.location[0] = 0.87 # For Translation along X
-bpy.context.object.location[1] = 0.87 # For Translation along Y
-bpy.context.object.location[2] = 0.87 # For Translation along Z
+#bpy.context.object.location[0] = 0.87 # For Translation along X
+#bpy.context.object.location[1] = 0.87 # For Translation along Y
+#bpy.context.object.location[2] = 0.87 # For Translation along Z
 
 ```
 
