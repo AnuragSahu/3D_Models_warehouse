@@ -55,3 +55,28 @@ bpy.data.objects[name].location.z = 3.0 # For Rotation along Z
 #bpy.context.object.rotation_euler[2] = 0.2 # For Rotation along Z
 
 ```
+- Sample Code
+
+```sh
+
+import bpy
+
+file_loc = '/home/anuragsahu/Desktop/Honors-1/3D-Warehouse-Models/BoxModels/model7/model.dae'
+imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
+name = "SketchUp";
+print(name)
+bpy.data.objects[name].location.x += 3.0
+#    bpy.data.objects["SketchUp"].location.y += 3.0
+#    bpy.data.objects["SketchUp"].location.z += 3.0
+
+file_loc = '/home/anuragsahu/Desktop/Honors-1/3D-Warehouse-Models/BoxModels/model7/model.dae'
+imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
+name = "SketchUp.001";
+print(name)
+bpy.data.objects[name].location.x += 6.0
+bpy.data.objects[name].scale.x = 0.05
+bpy.data.objects[name].rotation_euler.x = 0.2
+bpy.data.objects[name].rotation_euler.z = 0.2
+bpy.data.objects[name].rotation_euler.y = 0.2
+
+```
