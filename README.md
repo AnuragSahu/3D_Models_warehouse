@@ -80,3 +80,54 @@ bpy.data.objects[name].rotation_euler.z = 0.2
 bpy.data.objects[name].rotation_euler.y = 0.2
 
 ```
+- Code to Make a Rack Customised
+```sh
+import bpy
+import random
+
+def to_third_number(dig):
+    if(dig==0):
+        return "";
+    elif(dig<10 and dig > 0):
+        ret = ".00"+str(dig)
+        return ret
+    elif(dig<100 and dig > 9):
+        ret = ".0"+str(dig)
+        return ret
+    elif(dig<1000 and dig > 99):
+        ret = "."+str(dig)
+        return ret
+
+#file_loc = '/home/anuragsahu/Desktop/Honors-1/BoxModels/BoxA/model.dae'
+all_box_loc = '/home/anuragsahu/Desktop/Honors-1/SmallPrimitives/BoxModels/'
+rack_loc = '/home/anuragsahu/Desktop/Honors-1/SmallPrimitives/Racks/modal.dae'
+imported_object = bpy.ops.wm.collada_import(filepath=rack_loc)
+name = "Rack"
+bpy.data.objects[name].location.x += 0.0
+
+offset_x = -0.3
+z_positions = [0.3 , 1.63, 2.93, 4.2]
+y_positions = [-2.3,1 ,0, 1.5]
+
+
+boxes = ["BoxA","BoxB","BoxC","BoxD","BoxF","BoxH","BoxI"]
+box_count = {"BoxA":0, "BoxB":0, "BoxC":0, "BoxD":0, "BoxF":0, "BoxG":0, "BoxH":0, "BoxI":0}
+#box_placements = {"BoxA":{"x":[]}
+
+
+for rows in z_positions:
+    for cols in y_positions:
+        model = random.choice(boxes)
+        model_temp = model
+        model = model+(to_third_number(box_count[model_temp]))
+        box_count[model_temp] += 1
+        final_model_location = all_box_loc + model_temp +"/model.dae";
+        print(final_model_location)
+        imported_object = bpy.ops.wm.collada_import(filepath=final_model_location)
+        bpy.data.objects[model].location.x = offset_x
+        bpy.data.objects[model].location.y = cols
+        bpy.data.objects[model].location.z = rows
+        if(model_temp=="BoxH"):
+                    bpy.data.objects[model].location.z += 0.1
+            
+ ```
