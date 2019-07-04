@@ -67,7 +67,6 @@
     - Anurag
     - Shashwat
 - Anurag Showcased one sample rendered Image of progess made in manual model 
-![Alt text](./_images/sample_output.gif?raw=true "Output Sample")
 - Venue -> CVIT (Dr. Ravi's Office)
 
 I made an Model by Placing the Objects manually in the Scene, 
