@@ -72,6 +72,9 @@
 I made an Model by Placing the Objects manually in the Scene, 
 the link to that model. <a href="https://drive.google.com/file/d/1RGn6QzW1_GJdYuNm6cQF0sSnF0QWWsHi/view?usp=sharing"> Link </a>
 
+
+NOTE : The Minutes of the meeting are incomplete.
+
 ![Alt text](./_images/sample_output.gif?raw=true "Output Sample")
 
 These are some of the small but Important code Snippets which you might be looking for
