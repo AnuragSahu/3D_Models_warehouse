@@ -1,6 +1,75 @@
 # 3D_Models_warehouse
 3D Models for the warehouse.
 
+### Minutes of the meeting right from the start of the Project Assignments:
+
+#### 1st Week  (Monday)
+- Introduction to the Project.
+- Introduciton to the People Assigned and Professors associated with the Project.
+- Discussion on the possiblities of the Final Devirables.
+- People Involved 
+    - Dr. Madhav Krishna
+    - Dr. Ravi Kiran
+    - Satyajit
+    - Tushar
+    - Anurag
+    - Puru
+ - Venue -> CVIT (Dr. Ravi's Office)
+
+#### 1st Week (Wednessday)
+- Discussion on the Current Technologies Avilable to produce the Deliverables
+    - Selected Blender for Scripting the Dataset.
+
+- Discussion continues on the how to incoporates the Constraints included by the Robot.
+    - Might as well use Gazebo or Blender to DO that
+- People Attending the Meeting:
+    - Dr. Madhav Krishna
+    - Satyajit
+    - Tushar
+    - Anurag
+    - Puru
+- Venue -> CVIT (Dr. Madhav's Office)
+
+#### 2nd Week (Monday)
+- People Attending the Meeting:
+    - Dr. Madhav Krishna
+    - Dr. Ravi Kiran
+    - Satyajit
+    - Tushar
+    - Anurag
+    - Shashwat
+
+- Introductory discussion for Shashwat for briefing of all the Decision made till last meetings
+- Discussion on how to get Started on the Project
+- Make a list of objects which can be possibly placed in the Dataset.
+- Added to Slack Group.
+- Venue -> CVIT (Dr. Ravi's Office)
+
+#### 2rd Week (Wednessday)
+- People Attending the Meeting:
+    - Dr. Ravi Kiran
+    - Satyajit
+    - Tushar
+    - Anurag
+    - Shashwat
+- Shashwat showcased the models which he got Online 
+- Further Discussions on how the Dataset should looklike.
+- Anurag displayed the comipled list aviable for free of the objects to place in the Warehouse Racks
+- Venue -> CVIT (Dr. Ravi's Office)
+
+#### 3rd Week (Monday)
+- People Attending the Meeting:
+    - Dr. Madhav Krishna
+    - Dr. Ravi Kiran
+    - Satyajit
+    - Tushar
+    - Mehtab
+    - Anurag
+    - Shashwat
+- Anurag Showcased one sample rendered Image of progess made in manual model 
+![Alt text](./_images/sample_output.gif?raw=true "Output Sample")
+- Venue -> CVIT (Dr. Ravi's Office)
+
 I made an Model by Placing the Objects manually in the Scene, 
 the link to that model. <a href="https://drive.google.com/file/d/1RGn6QzW1_GJdYuNm6cQF0sSnF0QWWsHi/view?usp=sharing"> Link </a>
 
