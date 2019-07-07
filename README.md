@@ -70,7 +70,7 @@
 - Venue -> CVIT (Dr. Ravi's Office)
 
 I made an Model by Placing the Objects manually in the Scene, 
-the link to that model. <a href="https://drive.google.com/file/d/1RGn6QzW1_GJdYuNm6cQF0sSnF0QWWsHi/view?usp=sharing"> Link </a>
+the link to that model. <a href="https://drive.google.com/open?id=1wZ8iNEyuch2FFlb2R95GFtXb_i4Rmf2r"> Link </a>
 
 
 NOTE : The Minutes of the meeting are incomplete.
