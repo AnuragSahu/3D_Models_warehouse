@@ -128,31 +128,6 @@ bpy.data.objects[name].location.z = 3.0 # For Rotation along Z
 #bpy.context.object.rotation_euler[2] = 0.2 # For Rotation along Z
 
 ```
-- Sample Code
-
-```sh
-
-import bpy
-
-file_loc = '/home/anuragsahu/Desktop/Honors-1/3D-Warehouse-Models/BoxModels/model7/model.dae'
-imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
-name = "SketchUp";
-print(name)
-bpy.data.objects[name].location.x += 3.0
-#    bpy.data.objects["SketchUp"].location.y += 3.0
-#    bpy.data.objects["SketchUp"].location.z += 3.0
-
-file_loc = '/home/anuragsahu/Desktop/Honors-1/3D-Warehouse-Models/BoxModels/model7/model.dae'
-imported_object = bpy.ops.wm.collada_import(filepath=file_loc)
-name = "SketchUp.001";
-print(name)
-bpy.data.objects[name].location.x += 6.0
-bpy.data.objects[name].scale.x = 0.05
-bpy.data.objects[name].rotation_euler.x = 0.2
-bpy.data.objects[name].rotation_euler.z = 0.2
-bpy.data.objects[name].rotation_euler.y = 0.2
-
-```
 - Code to Make a Rack Customised
 ```sh
 import bpy
@@ -203,4 +178,45 @@ for rows in z_positions:
         if(model_temp=="BoxH"):
                     bpy.data.objects[model].location.z += 0.1
             
+ ```
+ - Code to make Video from Frames
+ ```
+ import cv2
+import numpy as np
+import os
+ 
+from os.path import isfile, join
+ 
+def convert_frames_to_video(pathIn,pathOut,fps):
+    frame_array = []
+    files = [f for f in os.listdir(pathIn) if isfile(join(pathIn, f))]
+ 
+    #for sorting the file names properly
+    files.sort(key = lambda x: int(x[5:-4]))
+ 
+    for i in range(len(files)):
+        filename=pathIn + files[i]
+        #reading each files
+        img = cv2.imread(filename)
+        height, width, layers = img.shape
+        size = (width,height)
+        print(filename)
+        #inserting the frames into an image array
+        frame_array.append(img)
+ 
+    out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+ 
+    for i in range(len(frame_array)):
+        # writing to a image array
+        out.write(frame_array[i])
+    out.release()
+ 
+def main():
+    pathIn= './data/' //this is Usually found in /tmp/ folder so you may need to apply sudo before running the command
+    pathOut = 'video.avi'
+    fps = 25.0
+    convert_frames_to_video(pathIn, pathOut, fps)
+ 
+if __name__=="__main__":
+    main()
  ```
