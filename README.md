@@ -180,7 +180,8 @@ for rows in z_positions:
             
  ```
 
-![Alt text](./Script/Floor Planner/top_view.png "Top View")
+![Alt text](./Script/Floor%20Planner/top_view.png "Top View")
+
 - Code to Generate Random Floor Plans
 
  ```sh
