@@ -180,7 +180,7 @@ for rows in z_positions:
             
  ```
 - Code to Generate Random Floor Plans
- ```
+ ```sh
  import bpy
 from random import randrange
 
@@ -253,7 +253,7 @@ for x in x_coord:
  ```
 
  - Code to make Video from Frames
- ```
+ ```sh
  import cv2
 import numpy as np
 import os
