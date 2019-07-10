@@ -179,8 +179,9 @@ for rows in z_positions:
                     bpy.data.objects[model].location.z += 0.1
             
  ```
-- Code to Generate Random Floor Plans
+
 ![Alt text](./Script/Floor Planner/top_view.png "Top View")
+- Code to Generate Random Floor Plans
 
  ```sh
  import bpy
