@@ -180,6 +180,8 @@ for rows in z_positions:
             
  ```
 - Code to Generate Random Floor Plans
+![Alt text](./Script/Floor Planner/top_view.png "Top View")
+
  ```sh
  import bpy
 from random import randrange
