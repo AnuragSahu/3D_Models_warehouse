@@ -17,3 +17,5 @@ And the List of Attached Pictures along with Links and Model Number.
 | 8.  | ![alt text](./boxes/box8/model_img.png)  |<a href="https://github.com/AnuragSahu/3D_Models_warehouse/tree/master/Indivisual_Objects/boxes/box8"> Link </a>|Box8|
 | 9.  | ![alt text](./boxes/box9/model_img.png)  |<a href="https://github.com/AnuragSahu/3D_Models_warehouse/tree/master/Indivisual_Objects/boxes/box9"> Link </a>|Box9|
 | 10.  | ![alt text](./boxes/box10/model_img.png)  |<a href="https://github.com/AnuragSahu/3D_Models_warehouse/tree/master/Indivisual_Objects/boxes/box10"> Link </a>|Box10|
+| 11.  | ![alt text](./rack/rack1/model_img.png)  |<a href="https://github.com/AnuragSahu/3D_Models_warehouse/tree/master/Indivisual_Objects/rack/rack1"> Link </a>|rack1|
+| 10.  | ![alt text](./rack/rack2/model_img.png)  |<a href="https://github.com/AnuragSahu/3D_Models_warehouse/tree/master/Indivisual_Objects/rack/rack2"> Link </a>|rack2|
