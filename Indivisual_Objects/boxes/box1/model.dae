@@ -1,0 +1,2576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.80.74 commit date:2019-06-19, commit time:18:29, hash:d30f72dfd8ac</authoring_tool>
+    </contributor>
+    <created>2019-08-13T00:02:39</created>
+    <modified>2019-08-13T00:02:39</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="skp_camera_Last_Saved_SketchUp_View-camera" name="skp_camera_Last_Saved_SketchUp_View">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">0</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">1</znear>
+            <zfar sid="zfar">1000</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="Wood_OSB-effect">
+      <profile_COMMON>
+        <newparam sid="Wood_OSB_jpg-surface">
+          <surface type="2D">
+            <init_from>Wood_OSB_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Wood_OSB_jpg-sampler">
+          <sampler2D>
+            <source>Wood_OSB_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Wood_OSB_jpg-sampler" texcoord="ID418"/>
+            </diffuse>
+            <transparency>
+              <float sid="alpha">1</float>
+            </transparency>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Wood_OSB_jpg" name="Wood_OSB_jpg">
+      <init_from>Wood_OSB.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Wood_OSB-material" name="Wood_OSB">
+      <instance_effect url="#Wood_OSB-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID414-mesh" name="ID414">
+      <mesh>
+        <source id="ID414-mesh-positions">
+          <float_array id="ID414-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID414-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID414-mesh-normals">
+          <float_array id="ID414-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID414-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID414-mesh-map-0">
+          <float_array id="ID414-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID414-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID414-mesh-vertices">
+          <input semantic="POSITION" source="#ID414-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID414-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID414-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID414-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID405-mesh" name="ID405">
+      <mesh>
+        <source id="ID405-mesh-positions">
+          <float_array id="ID405-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID405-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID405-mesh-normals">
+          <float_array id="ID405-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID405-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID405-mesh-map-0">
+          <float_array id="ID405-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID405-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID405-mesh-vertices">
+          <input semantic="POSITION" source="#ID405-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID405-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID405-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID405-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID396-mesh" name="ID396">
+      <mesh>
+        <source id="ID396-mesh-positions">
+          <float_array id="ID396-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID396-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID396-mesh-normals">
+          <float_array id="ID396-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID396-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID396-mesh-map-0">
+          <float_array id="ID396-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID396-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID396-mesh-vertices">
+          <input semantic="POSITION" source="#ID396-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID396-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID396-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID396-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID387-mesh" name="ID387">
+      <mesh>
+        <source id="ID387-mesh-positions">
+          <float_array id="ID387-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID387-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID387-mesh-normals">
+          <float_array id="ID387-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID387-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID387-mesh-map-0">
+          <float_array id="ID387-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID387-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID387-mesh-vertices">
+          <input semantic="POSITION" source="#ID387-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID387-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID387-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID387-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID378-mesh" name="ID378">
+      <mesh>
+        <source id="ID378-mesh-positions">
+          <float_array id="ID378-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID378-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID378-mesh-normals">
+          <float_array id="ID378-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID378-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID378-mesh-map-0">
+          <float_array id="ID378-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID378-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID378-mesh-vertices">
+          <input semantic="POSITION" source="#ID378-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID378-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID378-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID378-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID369-mesh" name="ID369">
+      <mesh>
+        <source id="ID369-mesh-positions">
+          <float_array id="ID369-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID369-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID369-mesh-normals">
+          <float_array id="ID369-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID369-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID369-mesh-map-0">
+          <float_array id="ID369-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID369-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID369-mesh-vertices">
+          <input semantic="POSITION" source="#ID369-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID369-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID369-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID369-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID360-mesh" name="ID360">
+      <mesh>
+        <source id="ID360-mesh-positions">
+          <float_array id="ID360-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID360-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID360-mesh-normals">
+          <float_array id="ID360-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID360-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID360-mesh-map-0">
+          <float_array id="ID360-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID360-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID360-mesh-vertices">
+          <input semantic="POSITION" source="#ID360-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID360-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID360-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID360-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID351-mesh" name="ID351">
+      <mesh>
+        <source id="ID351-mesh-positions">
+          <float_array id="ID351-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID351-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID351-mesh-normals">
+          <float_array id="ID351-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID351-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID351-mesh-map-0">
+          <float_array id="ID351-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID351-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID351-mesh-vertices">
+          <input semantic="POSITION" source="#ID351-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID351-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID351-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID351-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID342-mesh" name="ID342">
+      <mesh>
+        <source id="ID342-mesh-positions">
+          <float_array id="ID342-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID342-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID342-mesh-normals">
+          <float_array id="ID342-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID342-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID342-mesh-map-0">
+          <float_array id="ID342-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID342-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID342-mesh-vertices">
+          <input semantic="POSITION" source="#ID342-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID342-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID342-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID342-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID333-mesh" name="ID333">
+      <mesh>
+        <source id="ID333-mesh-positions">
+          <float_array id="ID333-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID333-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID333-mesh-normals">
+          <float_array id="ID333-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID333-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID333-mesh-map-0">
+          <float_array id="ID333-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID333-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID333-mesh-vertices">
+          <input semantic="POSITION" source="#ID333-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID333-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID333-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID333-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID324-mesh" name="ID324">
+      <mesh>
+        <source id="ID324-mesh-positions">
+          <float_array id="ID324-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID324-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID324-mesh-normals">
+          <float_array id="ID324-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID324-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID324-mesh-map-0">
+          <float_array id="ID324-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID324-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID324-mesh-vertices">
+          <input semantic="POSITION" source="#ID324-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID324-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID324-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID324-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID315-mesh" name="ID315">
+      <mesh>
+        <source id="ID315-mesh-positions">
+          <float_array id="ID315-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID315-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID315-mesh-normals">
+          <float_array id="ID315-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID315-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID315-mesh-map-0">
+          <float_array id="ID315-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID315-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID315-mesh-vertices">
+          <input semantic="POSITION" source="#ID315-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID315-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID315-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID315-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID306-mesh" name="ID306">
+      <mesh>
+        <source id="ID306-mesh-positions">
+          <float_array id="ID306-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID306-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID306-mesh-normals">
+          <float_array id="ID306-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID306-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID306-mesh-map-0">
+          <float_array id="ID306-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID306-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID306-mesh-vertices">
+          <input semantic="POSITION" source="#ID306-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID306-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID306-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID306-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID297-mesh" name="ID297">
+      <mesh>
+        <source id="ID297-mesh-positions">
+          <float_array id="ID297-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID297-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID297-mesh-normals">
+          <float_array id="ID297-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID297-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID297-mesh-map-0">
+          <float_array id="ID297-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID297-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID297-mesh-vertices">
+          <input semantic="POSITION" source="#ID297-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID297-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID297-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID297-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID288-mesh" name="ID288">
+      <mesh>
+        <source id="ID288-mesh-positions">
+          <float_array id="ID288-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID288-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID288-mesh-normals">
+          <float_array id="ID288-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID288-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID288-mesh-map-0">
+          <float_array id="ID288-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID288-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID288-mesh-vertices">
+          <input semantic="POSITION" source="#ID288-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID288-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID288-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID288-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID279-mesh" name="ID279">
+      <mesh>
+        <source id="ID279-mesh-positions">
+          <float_array id="ID279-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID279-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID279-mesh-normals">
+          <float_array id="ID279-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID279-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID279-mesh-map-0">
+          <float_array id="ID279-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID279-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID279-mesh-vertices">
+          <input semantic="POSITION" source="#ID279-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID279-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID279-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID279-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID270-mesh" name="ID270">
+      <mesh>
+        <source id="ID270-mesh-positions">
+          <float_array id="ID270-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID270-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID270-mesh-normals">
+          <float_array id="ID270-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID270-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID270-mesh-map-0">
+          <float_array id="ID270-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID270-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID270-mesh-vertices">
+          <input semantic="POSITION" source="#ID270-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID270-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID270-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID270-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID261-mesh" name="ID261">
+      <mesh>
+        <source id="ID261-mesh-positions">
+          <float_array id="ID261-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID261-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID261-mesh-normals">
+          <float_array id="ID261-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID261-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID261-mesh-map-0">
+          <float_array id="ID261-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID261-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID261-mesh-vertices">
+          <input semantic="POSITION" source="#ID261-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID261-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID261-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID261-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID252-mesh" name="ID252">
+      <mesh>
+        <source id="ID252-mesh-positions">
+          <float_array id="ID252-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID252-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID252-mesh-normals">
+          <float_array id="ID252-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID252-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID252-mesh-map-0">
+          <float_array id="ID252-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID252-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID252-mesh-vertices">
+          <input semantic="POSITION" source="#ID252-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID252-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID252-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID252-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID243-mesh" name="ID243">
+      <mesh>
+        <source id="ID243-mesh-positions">
+          <float_array id="ID243-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID243-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID243-mesh-normals">
+          <float_array id="ID243-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID243-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID243-mesh-map-0">
+          <float_array id="ID243-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID243-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID243-mesh-vertices">
+          <input semantic="POSITION" source="#ID243-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID243-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID243-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID243-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID234-mesh" name="ID234">
+      <mesh>
+        <source id="ID234-mesh-positions">
+          <float_array id="ID234-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID234-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID234-mesh-normals">
+          <float_array id="ID234-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID234-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID234-mesh-map-0">
+          <float_array id="ID234-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID234-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID234-mesh-vertices">
+          <input semantic="POSITION" source="#ID234-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID234-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID234-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID234-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID225-mesh" name="ID225">
+      <mesh>
+        <source id="ID225-mesh-positions">
+          <float_array id="ID225-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID225-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID225-mesh-normals">
+          <float_array id="ID225-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID225-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID225-mesh-map-0">
+          <float_array id="ID225-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID225-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID225-mesh-vertices">
+          <input semantic="POSITION" source="#ID225-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID225-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID225-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID225-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID216-mesh" name="ID216">
+      <mesh>
+        <source id="ID216-mesh-positions">
+          <float_array id="ID216-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID216-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID216-mesh-normals">
+          <float_array id="ID216-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID216-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID216-mesh-map-0">
+          <float_array id="ID216-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID216-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID216-mesh-vertices">
+          <input semantic="POSITION" source="#ID216-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID216-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID216-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID216-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID207-mesh" name="ID207">
+      <mesh>
+        <source id="ID207-mesh-positions">
+          <float_array id="ID207-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID207-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID207-mesh-normals">
+          <float_array id="ID207-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID207-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID207-mesh-map-0">
+          <float_array id="ID207-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID207-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID207-mesh-vertices">
+          <input semantic="POSITION" source="#ID207-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID207-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID207-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID207-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID198-mesh" name="ID198">
+      <mesh>
+        <source id="ID198-mesh-positions">
+          <float_array id="ID198-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID198-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID198-mesh-normals">
+          <float_array id="ID198-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID198-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID198-mesh-map-0">
+          <float_array id="ID198-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID198-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID198-mesh-vertices">
+          <input semantic="POSITION" source="#ID198-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID198-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID198-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID198-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID189-mesh" name="ID189">
+      <mesh>
+        <source id="ID189-mesh-positions">
+          <float_array id="ID189-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID189-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID189-mesh-normals">
+          <float_array id="ID189-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID189-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID189-mesh-map-0">
+          <float_array id="ID189-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID189-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID189-mesh-vertices">
+          <input semantic="POSITION" source="#ID189-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID189-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID189-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID189-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID180-mesh" name="ID180">
+      <mesh>
+        <source id="ID180-mesh-positions">
+          <float_array id="ID180-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID180-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID180-mesh-normals">
+          <float_array id="ID180-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID180-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID180-mesh-map-0">
+          <float_array id="ID180-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID180-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID180-mesh-vertices">
+          <input semantic="POSITION" source="#ID180-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID180-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID180-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID180-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID171-mesh" name="ID171">
+      <mesh>
+        <source id="ID171-mesh-positions">
+          <float_array id="ID171-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID171-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID171-mesh-normals">
+          <float_array id="ID171-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID171-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID171-mesh-map-0">
+          <float_array id="ID171-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID171-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID171-mesh-vertices">
+          <input semantic="POSITION" source="#ID171-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID171-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID171-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID171-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID162-mesh" name="ID162">
+      <mesh>
+        <source id="ID162-mesh-positions">
+          <float_array id="ID162-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID162-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID162-mesh-normals">
+          <float_array id="ID162-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID162-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID162-mesh-map-0">
+          <float_array id="ID162-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID162-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID162-mesh-vertices">
+          <input semantic="POSITION" source="#ID162-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID162-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID162-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID162-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID153-mesh" name="ID153">
+      <mesh>
+        <source id="ID153-mesh-positions">
+          <float_array id="ID153-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID153-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID153-mesh-normals">
+          <float_array id="ID153-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID153-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID153-mesh-map-0">
+          <float_array id="ID153-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID153-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID153-mesh-vertices">
+          <input semantic="POSITION" source="#ID153-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID153-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID153-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID153-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID144-mesh" name="ID144">
+      <mesh>
+        <source id="ID144-mesh-positions">
+          <float_array id="ID144-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID144-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID144-mesh-normals">
+          <float_array id="ID144-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID144-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID144-mesh-map-0">
+          <float_array id="ID144-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID144-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID144-mesh-vertices">
+          <input semantic="POSITION" source="#ID144-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID144-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID144-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID144-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID135-mesh" name="ID135">
+      <mesh>
+        <source id="ID135-mesh-positions">
+          <float_array id="ID135-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID135-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID135-mesh-normals">
+          <float_array id="ID135-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID135-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID135-mesh-map-0">
+          <float_array id="ID135-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID135-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID135-mesh-vertices">
+          <input semantic="POSITION" source="#ID135-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID135-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID135-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID135-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID126-mesh" name="ID126">
+      <mesh>
+        <source id="ID126-mesh-positions">
+          <float_array id="ID126-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID126-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID126-mesh-normals">
+          <float_array id="ID126-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID126-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID126-mesh-map-0">
+          <float_array id="ID126-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID126-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID126-mesh-vertices">
+          <input semantic="POSITION" source="#ID126-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID126-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID126-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID126-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID117-mesh" name="ID117">
+      <mesh>
+        <source id="ID117-mesh-positions">
+          <float_array id="ID117-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID117-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID117-mesh-normals">
+          <float_array id="ID117-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID117-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID117-mesh-map-0">
+          <float_array id="ID117-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID117-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID117-mesh-vertices">
+          <input semantic="POSITION" source="#ID117-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID117-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID117-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID117-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID108-mesh" name="ID108">
+      <mesh>
+        <source id="ID108-mesh-positions">
+          <float_array id="ID108-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID108-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID108-mesh-normals">
+          <float_array id="ID108-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID108-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID108-mesh-map-0">
+          <float_array id="ID108-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID108-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID108-mesh-vertices">
+          <input semantic="POSITION" source="#ID108-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID108-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID108-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID108-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID99-mesh" name="ID99">
+      <mesh>
+        <source id="ID99-mesh-positions">
+          <float_array id="ID99-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID99-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID99-mesh-normals">
+          <float_array id="ID99-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID99-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID99-mesh-map-0">
+          <float_array id="ID99-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID99-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID99-mesh-vertices">
+          <input semantic="POSITION" source="#ID99-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID99-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID99-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID99-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID90-mesh" name="ID90">
+      <mesh>
+        <source id="ID90-mesh-positions">
+          <float_array id="ID90-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID90-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID90-mesh-normals">
+          <float_array id="ID90-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID90-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID90-mesh-map-0">
+          <float_array id="ID90-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID90-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID90-mesh-vertices">
+          <input semantic="POSITION" source="#ID90-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID90-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID90-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID90-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID81-mesh" name="ID81">
+      <mesh>
+        <source id="ID81-mesh-positions">
+          <float_array id="ID81-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID81-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID81-mesh-normals">
+          <float_array id="ID81-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID81-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID81-mesh-map-0">
+          <float_array id="ID81-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID81-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID81-mesh-vertices">
+          <input semantic="POSITION" source="#ID81-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID81-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID81-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID81-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID72-mesh" name="ID72">
+      <mesh>
+        <source id="ID72-mesh-positions">
+          <float_array id="ID72-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID72-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID72-mesh-normals">
+          <float_array id="ID72-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID72-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID72-mesh-map-0">
+          <float_array id="ID72-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID72-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID72-mesh-vertices">
+          <input semantic="POSITION" source="#ID72-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID72-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID72-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID72-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID63-mesh" name="ID63">
+      <mesh>
+        <source id="ID63-mesh-positions">
+          <float_array id="ID63-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID63-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID63-mesh-normals">
+          <float_array id="ID63-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID63-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID63-mesh-map-0">
+          <float_array id="ID63-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID63-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID63-mesh-vertices">
+          <input semantic="POSITION" source="#ID63-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID63-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID63-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID63-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID54-mesh" name="ID54">
+      <mesh>
+        <source id="ID54-mesh-positions">
+          <float_array id="ID54-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID54-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID54-mesh-normals">
+          <float_array id="ID54-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID54-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID54-mesh-map-0">
+          <float_array id="ID54-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID54-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID54-mesh-vertices">
+          <input semantic="POSITION" source="#ID54-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID54-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID54-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID54-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID45-mesh" name="ID45">
+      <mesh>
+        <source id="ID45-mesh-positions">
+          <float_array id="ID45-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID45-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID45-mesh-normals">
+          <float_array id="ID45-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID45-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID45-mesh-map-0">
+          <float_array id="ID45-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID45-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID45-mesh-vertices">
+          <input semantic="POSITION" source="#ID45-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID45-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID45-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID45-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID36-mesh" name="ID36">
+      <mesh>
+        <source id="ID36-mesh-positions">
+          <float_array id="ID36-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID36-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID36-mesh-normals">
+          <float_array id="ID36-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID36-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID36-mesh-map-0">
+          <float_array id="ID36-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID36-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID36-mesh-vertices">
+          <input semantic="POSITION" source="#ID36-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID36-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID36-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID36-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID27-mesh" name="ID27">
+      <mesh>
+        <source id="ID27-mesh-positions">
+          <float_array id="ID27-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID27-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID27-mesh-normals">
+          <float_array id="ID27-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID27-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID27-mesh-map-0">
+          <float_array id="ID27-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID27-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID27-mesh-vertices">
+          <input semantic="POSITION" source="#ID27-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID27-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID27-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID27-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID18-mesh" name="ID18">
+      <mesh>
+        <source id="ID18-mesh-positions">
+          <float_array id="ID18-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID18-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID18-mesh-normals">
+          <float_array id="ID18-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID18-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID18-mesh-map-0">
+          <float_array id="ID18-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID18-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID18-mesh-vertices">
+          <input semantic="POSITION" source="#ID18-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID18-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID18-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID18-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="ID4-mesh" name="ID4">
+      <mesh>
+        <source id="ID4-mesh-positions">
+          <float_array id="ID4-mesh-positions-array" count="72">1.233386 6.14939 0 0 0 0 0 6.14939 0 1.233386 0 0 1.233386 0 33.62514 0 0 0 1.233386 0 0 0 0 33.62514 0 6.14939 33.62514 0 0 0 0 0 33.62514 0 6.14939 0 0 6.14939 33.62514 1.233386 6.14939 0 0 6.14939 0 1.233386 6.14939 33.62514 1.233386 6.14939 0 1.233386 0 33.62514 1.233386 0 0 1.233386 6.14939 33.62514 1.233386 0 33.62514 0 6.14939 33.62514 0 0 33.62514 1.233386 6.14939 33.62514</float_array>
+          <technique_common>
+            <accessor source="#ID4-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID4-mesh-normals">
+          <float_array id="ID4-mesh-normals-array" count="18">0 0 -1 0 -1 0 -1 0 0 0 1 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID4-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID4-mesh-map-0">
+          <float_array id="ID4-mesh-map-0-array" count="72">-1.470947 1.936633 -1.368165 1.314894 -1.368165 1.936633 -1.368165 1.314894 -1.470947 1.936633 -1.470947 1.314894 1.470947 3.399698 1.368165 0 1.470947 0 1.368165 0 1.470947 3.399698 1.368165 3.399698 -1.596209 3.399698 -1.08376 0 -1.08376 3.399698 -1.08376 0 -1.596209 3.399698 -1.596209 0 -1.368165 3.399698 -1.470947 0 -1.368165 0 -1.470947 0 -1.368165 3.399698 -1.470947 3.399698 1.596209 0 1.08376 3.399698 1.08376 0 1.08376 3.399698 1.596209 0 1.596209 3.399698 1.470947 1.314894 1.368165 1.936633 1.368165 1.314894 1.368165 1.936633 1.470947 1.314894 1.470947 1.936633</float_array>
+          <technique_common>
+            <accessor source="#ID4-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID4-mesh-vertices">
+          <input semantic="POSITION" source="#ID4-mesh-positions"/>
+        </vertices>
+        <triangles material="Wood_OSB-material" count="12">
+          <input semantic="VERTEX" source="#ID4-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID4-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID4-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Box1" name="Box1" type="NODE">
+        <matrix sid="transform">0.0254 0 0 0 0 0.0254 0 0 0 0 0.0254 0 0 0 0 1</matrix>
+        <node id="skp_camera_Last_Saved_SketchUp_View" name="skp_camera_Last_Saved_SketchUp_View" type="NODE">
+          <matrix sid="transform">0.5533309 -0.4229739 0.7175781 106.617 0.8329617 0.2809787 -0.4766824 -12.2873 1.47633e-8 0.861478 0.5077953 69.83247 0 0 0 1</matrix>
+          <instance_camera url="#skp_camera_Last_Saved_SketchUp_View-camera"/>
+        </node>
+        <node id="group_0" name="group_0" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 9.489627 0 0 0 1</matrix>
+          <instance_geometry url="#ID4-mesh" name="group_0">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID13" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_1" name="group_1" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 15.72978 0 0 0 1</matrix>
+          <instance_geometry url="#ID18-mesh" name="group_1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID22" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_2" name="group_2" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 21.96994 0 0 0 1</matrix>
+          <instance_geometry url="#ID27-mesh" name="group_2">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID31" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_3" name="group_3" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 28.2101 0 0 0 1</matrix>
+          <instance_geometry url="#ID36-mesh" name="group_3">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID40" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_4" name="group_4" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 34.45026 0 0 0 1</matrix>
+          <instance_geometry url="#ID45-mesh" name="group_4">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID49" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_5" name="group_5" type="NODE">
+          <matrix sid="transform">1 0 0 16.41798 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 40.69041 0 0 0 1</matrix>
+          <instance_geometry url="#ID54-mesh" name="group_5">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID58" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_6" name="group_6" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 28.2101 0 0 0 1</matrix>
+          <instance_geometry url="#ID63-mesh" name="group_6">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID67" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_7" name="group_7" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 21.96994 0 0 0 1</matrix>
+          <instance_geometry url="#ID72-mesh" name="group_7">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID76" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_8" name="group_8" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 15.72978 0 0 0 1</matrix>
+          <instance_geometry url="#ID81-mesh" name="group_8">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID85" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_9" name="group_9" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 34.45026 0 0 0 1</matrix>
+          <instance_geometry url="#ID90-mesh" name="group_9">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID94" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_10" name="group_10" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 9.489627 0 0 0 1</matrix>
+          <instance_geometry url="#ID99-mesh" name="group_10">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID103" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_11" name="group_11" type="NODE">
+          <matrix sid="transform">1 0 0 55.55577 0 -4.37114e-8 1.83 -0.7327552 0 -1 -7.99918e-8 40.69041 0 0 0 1</matrix>
+          <instance_geometry url="#ID108-mesh" name="group_11">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID112" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_12" name="group_12" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 40.69041 0 0 0 1</matrix>
+          <instance_geometry url="#ID117-mesh" name="group_12">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID121" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_13" name="group_13" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 34.41876 0 0 0 1</matrix>
+          <instance_geometry url="#ID126-mesh" name="group_13">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID130" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_14" name="group_14" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 28.14711 0 0 0 1</matrix>
+          <instance_geometry url="#ID135-mesh" name="group_14">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID139" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_15" name="group_15" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 21.87545 0 0 0 1</matrix>
+          <instance_geometry url="#ID144-mesh" name="group_15">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID148" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_16" name="group_16" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 15.6038 0 0 0 1</matrix>
+          <instance_geometry url="#ID153-mesh" name="group_16">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID157" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_17" name="group_17" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 0.5006309 0 -1 8.45546e-8 9.332147 0 0 0 1</matrix>
+          <instance_geometry url="#ID162-mesh" name="group_17">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID166" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_18" name="group_18" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 28.14711 0 0 0 1</matrix>
+          <instance_geometry url="#ID171-mesh" name="group_18">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID175" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_19" name="group_19" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 40.69041 0 0 0 1</matrix>
+          <instance_geometry url="#ID180-mesh" name="group_19">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID184" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_20" name="group_20" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 21.87545 0 0 0 1</matrix>
+          <instance_geometry url="#ID189-mesh" name="group_20">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID193" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_21" name="group_21" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 9.332147 0 0 0 1</matrix>
+          <instance_geometry url="#ID198-mesh" name="group_21">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID202" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_22" name="group_22" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 34.41876 0 0 0 1</matrix>
+          <instance_geometry url="#ID207-mesh" name="group_22">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID211" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_23" name="group_23" type="NODE">
+          <matrix sid="transform">7.54979e-8 7.54979e-8 1.11996 17.74191 -1 5.69993e-15 8.45546e-8 60.8274 0 -1 8.45546e-8 15.6038 0 0 0 1</matrix>
+          <instance_geometry url="#ID216-mesh" name="group_23">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID220" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_24" name="group_24" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 -0.7327552 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID225-mesh" name="group_24">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID229" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_25" name="group_25" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 5.515276 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID234-mesh" name="group_25">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID238" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_26" name="group_26" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 11.76331 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID243-mesh" name="group_26">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID247" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_27" name="group_27" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 18.01134 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID252-mesh" name="group_27">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID256" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_28" name="group_28" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 24.25937 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID261-mesh" name="group_28">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID265" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_29" name="group_29" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 30.5074 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID270-mesh" name="group_29">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID274" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_30" name="group_30" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 36.75543 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID279-mesh" name="group_30">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID283" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_31" name="group_31" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 43.00347 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID288-mesh" name="group_31">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID292" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_32" name="group_32" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.65529e-13 1.200625 16.41798 0 1 5.58926e-13 49.2515 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID297-mesh" name="group_32">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID301" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_33" name="group_33" type="NODE">
+          <matrix sid="transform">7.54979e-8 -4.03338e-13 1.200625 16.41798 0 0.866407 5.58926e-13 55.49953 -1 0 9.06447e-8 3.340236 0 0 0 1</matrix>
+          <instance_geometry url="#ID306-mesh" name="group_33">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID310" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_34" name="group_34" type="NODE">
+          <matrix sid="transform">1 0 0 56.78916 0 1 -4.21332e-13 11.76331 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID315-mesh" name="group_34">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID319" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_35" name="group_35" type="NODE">
+          <matrix sid="transform">1 0 0 56.78916 0 1 -4.21332e-13 29.01134 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID324-mesh" name="group_35">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID328" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_36" name="group_36" type="NODE">
+          <matrix sid="transform">1 0 0 56.78916 0 1 -4.21332e-13 46.25937 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID333-mesh" name="group_36">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID337" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_37" name="group_37" type="NODE">
+          <matrix sid="transform">1 0 0 15.18459 0 1 -4.21332e-13 29.01134 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID342-mesh" name="group_37">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID346" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_38" name="group_38" type="NODE">
+          <matrix sid="transform">1 0 0 15.18459 0 1 -4.21332e-13 46.25937 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID351-mesh" name="group_38">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID355" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_39" name="group_39" type="NODE">
+          <matrix sid="transform">1 0 0 15.18459 0 1 -4.21332e-13 11.76331 0 3.54209e-13 1.1895 2.10685 0 0 0 1</matrix>
+          <instance_geometry url="#ID360-mesh" name="group_39">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID364" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_40" name="group_40" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 -1.38161e-7 44.63488 0 7.54979e-8 1.83 -0.7065999 1 4.37114e-8 -6.03922e-15 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID369-mesh" name="group_40">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID373" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_41" name="group_41" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 -1.38161e-7 21.18212 0 7.54979e-8 1.83 -0.7065999 1 4.37114e-8 -6.03922e-15 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID378-mesh" name="group_41">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID382" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_42" name="group_42" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 0 44.63488 -1 -4.37114e-8 -4.21332e-13 62.06079 -3.54209e-13 0 1.1895 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID387-mesh" name="group_42">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID391" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_43" name="group_43" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 0 21.51677 -1 -4.37114e-8 -4.21332e-13 62.06079 -3.54209e-13 0 1.1895 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID396-mesh" name="group_43">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID400" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_44" name="group_44" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 0 44.63488 -1 -4.37114e-8 -4.21332e-13 -0.7065999 -3.54209e-13 0 1.1895 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID405-mesh" name="group_44">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID409" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="group_45" name="group_45" type="NODE">
+          <matrix sid="transform">-4.37114e-8 1 0 21.51677 -1 -4.37114e-8 -4.21332e-13 -0.7065999 -3.54209e-13 0 1.1895 0.8734646 0 0 0 1</matrix>
+          <instance_geometry url="#ID414-mesh" name="group_45">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Wood_OSB-material" target="#Wood_OSB-material">
+                  <bind_vertex_input semantic="ID418" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
