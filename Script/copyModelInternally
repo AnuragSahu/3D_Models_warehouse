@@ -1,0 +1,5 @@
+import bpy
+
+ob = bpy.data.objects.get("Cube")
+ob_cp = ob.copy()
+bpy.context.scene.collection.objects.link(ob_cp)
