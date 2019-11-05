@@ -7,7 +7,7 @@
 - Introduction to the Project.
 - Introduciton to the People Assigned and Professors associated with the Project.
 - Discussion on the possiblities of the Final Devirables.
-- People Involved 
+- People Involved
     - Dr. Madhav Krishna
     - Dr. Ravi Kiran
     - Satyajit
@@ -52,7 +52,7 @@
     - Tushar
     - Anurag
     - Shashwat
-- Shashwat showcased the models which he got Online 
+- Shashwat showcased the models which he got Online
 - Further Discussions on how the Dataset should looklike.
 - Anurag displayed the comipled list aviable for free of the objects to place in the Warehouse Racks
 - Venue -> CVIT (Dr. Ravi's Office)
@@ -66,10 +66,10 @@
     - Mehtab
     - Anurag
     - Shashwat
-- Anurag Showcased one sample rendered Image of progess made in manual model 
+- Anurag Showcased one sample rendered Image of progess made in manual model
 - Venue -> CVIT (Dr. Ravi's Office)
 
-I made an Model by Placing the Objects manually in the Scene, 
+I made an Model by Placing the Objects manually in the Scene,
 the link to that model. <a href="https://drive.google.com/open?id=1wZ8iNEyuch2FFlb2R95GFtXb_i4Rmf2r"> Link </a>
 
 
@@ -133,6 +133,20 @@ bpy.data.objects[name].location.z = 3.0 # For Rotation along Z
 import bpy
 import random
 
+
+#all_box_loc = '/home/anuragsahu/Desktop/Honors-1/SmallPrimitives/BoxModels/'
+all_box_loc = '../SmallPrimitives/BoxModels/'
+rack_loc = '../SmallPrimitives/Racks/modal.dae'
+
+offset_x = -0.5
+z_positions = [0.3 , 1.63, 2.98, 4.35]
+y_positions = [-2.3,-1.2 ,0, 1.5]
+
+box_count = {"BoxA":0, "BoxB":0, "BoxC":0, "BoxD":0, "BoxF":0, "BoxG":0, "BoxH":0, "BoxI":0}
+
+distance_between_racks_x = 1
+distance_between_racks_y = 2.7
+rack_count = 0
 def to_third_number(dig):
     if(dig==0):
         return "";
@@ -146,38 +160,44 @@ def to_third_number(dig):
         ret = "."+str(dig)
         return ret
 
-#file_loc = '/home/anuragsahu/Desktop/Honors-1/BoxModels/BoxA/model.dae'
-all_box_loc = '/home/anuragsahu/Desktop/Honors-1/SmallPrimitives/BoxModels/'
-rack_loc = '/home/anuragsahu/Desktop/Honors-1/SmallPrimitives/Racks/modal.dae'
-imported_object = bpy.ops.wm.collada_import(filepath=rack_loc)
-name = "Rack"
-bpy.data.objects[name].location.x += 0.0
+def place_racks_and_objects(rack_location,rack_count):
+    imported_object = bpy.ops.wm.collada_import(filepath=rack_loc)
+    name = "Rack" + to_third_number(rack_count)
+    print(name)
+    bpy.data.objects[name].location.x += rack_location[0]
+    bpy.data.objects[name].location.y += rack_location[1]
+    bpy.data.objects[name].location.z += rack_location[2]
+    boxes = ["BoxA","BoxB","BoxD","BoxF","BoxH"]
 
-offset_x = -0.3
-z_positions = [0.3 , 1.63, 2.93, 4.2]
-y_positions = [-2.3,1 ,0, 1.5]
+    for rows in z_positions:
+        for cols in y_positions:
+            model = random.choice(boxes)
+            model_temp = model
+            model = model+(to_third_number(box_count[model_temp]))
+            box_count[model_temp] += 1
+            final_model_location = all_box_loc + model_temp +"/model.dae";
+            print(final_model_location)
+            imported_object = bpy.ops.wm.collada_import(filepath=final_model_location)
+            bpy.data.objects[model].location.x = offset_x + rack_location[0]
+            bpy.data.objects[model].location.y = cols + rack_location[1]
+            bpy.data.objects[model].location.z = rows + rack_location[2]
+
+def place_rack_pair(location,rack_count,distance_between_racks_x):
+    distance_between_racks_x += 1            
+    rack_location = [-distance_between_racks_x+location[0],
+                      distance_between_racks_y+location[1],
+                      0+location[2]]
+    place_racks_and_objects(rack_location,rack_count)
+    rack_location = [ distance_between_racks_x+location[0],
+                      distance_between_racks_y+location[1],
+                      0+location[2]]
+    place_racks_and_objects(rack_location,rack_count+1)
+    return rack_count+2
 
 
-boxes = ["BoxA","BoxB","BoxC","BoxD","BoxF","BoxH","BoxI"]
-box_count = {"BoxA":0, "BoxB":0, "BoxC":0, "BoxD":0, "BoxF":0, "BoxG":0, "BoxH":0, "BoxI":0}
-#box_placements = {"BoxA":{"x":[]}
-
-
-for rows in z_positions:
-    for cols in y_positions:
-        model = random.choice(boxes)
-        model_temp = model
-        model = model+(to_third_number(box_count[model_temp]))
-        box_count[model_temp] += 1
-        final_model_location = all_box_loc + model_temp +"/model.dae";
-        print(final_model_location)
-        imported_object = bpy.ops.wm.collada_import(filepath=final_model_location)
-        bpy.data.objects[model].location.x = offset_x
-        bpy.data.objects[model].location.y = cols
-        bpy.data.objects[model].location.z = rows
-        if(model_temp=="BoxH"):
-                    bpy.data.objects[model].location.z += 0.1
-            
+rack_count = place_rack_pair([0,0,0],rack_count,0)
+rack_count = place_rack_pair([0,2*2.7,0],rack_count,0)
+rack_count = place_rack_pair([0,4*2.7,0],rack_count,0)
  ```
 
 ![Alt text](./Script/Floor%20Planner/top_view.png "Top View")
@@ -221,38 +241,38 @@ while y <= y_end:
 
 subscript = 0
 for x in x_coord:
-    
+
     for y in y_coord:
-        
+
         model = "Rack Model"
-            
+
         if randrange(2) == 0:
             change = append_zero(subscript)
             if subscript > 0:
                 name = model + change
             else:
                 name = model
-            
+
             model_loc = rack_loc
             imported_object = bpy.ops.wm.collada_import(filepath=model_loc)
             bpy.data.objects[name].location.x = x
             bpy.data.objects[name].location.y = y
             bpy.data.objects[name].location.z = z
-            
+
             subscript += 1
-            
+
             change = append_zero(subscript)
             if subscript > 0:
                 name = model + change
             else:
                 name = model
-            
+
             model_loc = rack_loc
             imported_object = bpy.ops.wm.collada_import(filepath=model_loc)
             bpy.data.objects[name].location.x = x + x_rack
             bpy.data.objects[name].location.y = y
             bpy.data.objects[name].location.z = z
-            
+
             subscript += 1
  ```
 
@@ -261,16 +281,16 @@ for x in x_coord:
  import cv2
 import numpy as np
 import os
- 
+
 from os.path import isfile, join
- 
+
 def convert_frames_to_video(pathIn,pathOut,fps):
     frame_array = []
     files = [f for f in os.listdir(pathIn) if isfile(join(pathIn, f))]
- 
+
     #for sorting the file names properly
     files.sort(key = lambda x: int(x[5:-4]))
- 
+
     for i in range(len(files)):
         filename=pathIn + files[i]
         #reading each files
@@ -280,20 +300,20 @@ def convert_frames_to_video(pathIn,pathOut,fps):
         print(filename)
         #inserting the frames into an image array
         frame_array.append(img)
- 
+
     out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
- 
+
     for i in range(len(frame_array)):
         # writing to a image array
         out.write(frame_array[i])
     out.release()
- 
+
 def main():
     pathIn= './data/' //this is Usually found in /tmp/ folder so you may need to apply sudo before running the command
     pathOut = 'video.avi'
     fps = 25.0
     convert_frames_to_video(pathIn, pathOut, fps)
- 
+
 if __name__=="__main__":
     main()
  ```
