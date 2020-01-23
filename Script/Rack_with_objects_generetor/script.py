@@ -62,7 +62,8 @@ def place_rack_pair(location,rack_count,distance_between_racks_x):
     place_racks_and_objects(rack_location,rack_count+1)
     return rack_count+2
 
-
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete(use_global=False, confirm=False)
 rack_count = place_rack_pair([0,0,0],rack_count,0)
 rack_count = place_rack_pair([0,2*2.7,0],rack_count,0)
 rack_count = place_rack_pair([0,4*2.7,0],rack_count,0)
