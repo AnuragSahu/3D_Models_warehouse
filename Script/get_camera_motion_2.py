@@ -91,13 +91,13 @@ def get_3x4_RT_matrix_from_blender(cam):
     R_world2bcam = rotation.to_matrix().transposed()
 
     # Convert camera location to translation vector used in coordinate changes
-    # T_world2bcam = -1*R_world2bcam*cam.location
+    T_world2bcam = -1*R_world2bcam @ cam.location
     # Use location from matrix_world to account for constraints:     
-    T_world2bcam = -1*R_world2bcam * location
+    #T_world2bcam = -1*R_world2bcam * location
 
     # Build the coordinate transform matrix from world to computer vision camera
-    R_world2cv = R_bcam2cv*R_world2bcam
-    T_world2cv = R_bcam2cv*T_world2bcam
+    R_world2cv = R_bcam2cv @ R_world2bcam
+    T_world2cv = R_bcam2cv @ T_world2bcam
 
     # put into 3x4 matrix
     RT = Matrix((
@@ -110,7 +110,7 @@ def get_3x4_RT_matrix_from_blender(cam):
 def get_3x4_P_matrix_from_blender(cam):
     K = get_calibration_matrix_K_from_blender(cam.data)
     RT = get_3x4_RT_matrix_from_blender(cam)
-    return K*RT, K, RT
+    return K @ RT, K, RT
 
 # ----------------------------------------------------------
 if __name__ == "__main__":
@@ -124,11 +124,11 @@ if __name__ == "__main__":
     print("P")
     print(P)
 
-    print("==== 3D Cursor projection ====")
-    pc = P * bpy.context.scene.cursor_location
-    pc /= pc[2]
-    print("Projected cursor location")
-    print(pc)
+    #print("==== 3D Cursor projection ====")
+    #pc = P @ bpy.context.scene.cursor_location
+    #pc /= pc[2]
+    #print("Projected cursor location")
+    #print(pc)
 
     # Bonus code: save the 3x4 P matrix into a plain text file
     # Don't forget to import numpy for this
