@@ -1,4 +1,6 @@
 import bpy
+import math
+from decimal import Decimal
 from mathutils import Matrix, Vector
 
 #---------------------------------------------------------------
@@ -114,10 +116,14 @@ def get_3x4_P_matrix_from_blender(cam):
 
 
 def write_RT_mat(ground_truth,RT):
+    count = 0
     for i in RT:
         for j in i:
-            ground_truth.write(str(j)+" ")
-    ground_truth.write('\n')
+            ground_truth.write(str('%.6e'%Decimal(j)))
+            count += 1
+            if(count<12):
+                ground_truth.write(" ")
+    ground_truth.write("\n")
 
 
 def write_k_mat(k_mat,K):
@@ -131,26 +137,15 @@ def write_k_mat(k_mat,K):
 # ----------------------------------------------------------
 if __name__ == "__main__":
     # Insert your camera name here
-    ground_truth = open('../ground_truth.txt','w+')
+    ground_truth = open('../ground_truth_mod.txt','w+')
     k_mat = open('../k_mat.txt','w+')
     cam = bpy.data.objects['Camera']
     K = get_calibration_matrix_K_from_blender(cam.data)
     write_k_mat(k_mat,K)
     for f in range(bpy.context.scene.frame_start,bpy.context.scene.frame_end):
         P, RT = get_3x4_P_matrix_from_blender(cam)
-        write_RT_mat(ground_truth,RT)
+        write_RT_mat(ground_truth,P)
         bpy.context.scene.frame_set(f)
 
     k_mat.close()
     ground_truth.close()
-
-    #print("==== 3D Cursor projection ====")
-    #pc = P @ bpy.context.scene.cursor_location
-    #pc /= pc[2]
-    #print("Projected cursor location")
-    #print(pc)
-
-    # Bonus code: save the 3x4 P matrix into a plain text file
-    # Don't forget to import numpy for this
-    #nP = numpy.matrix(P)
-    #numpy.savetxt("/tmp/P3x4.txt", nP)  # to select precision, use e.g. fmt='%.2f'
