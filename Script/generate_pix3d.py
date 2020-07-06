@@ -229,3 +229,6 @@ for model in models:
 
         # append the imagesto pix3d
         pix3d["images"].append(image_copy)
+	
+with open('../pix3d_dataset/pix3d_train_s1.json', 'w+') as outfile:
+    json.dump(pix3d, outfile)
